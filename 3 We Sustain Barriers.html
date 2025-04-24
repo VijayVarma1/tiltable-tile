@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>We Sustain Barriers</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
+
+    .tile-container {
+      width: 250px;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .tile {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .tile-container:hover .tile {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Front Side - Blue Theme */
+    .front {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .front-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .front-content {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Back Side - Teal Theme */
+    .back {
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+      transform: rotateY(180deg);
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 20px;
+      overflow-y: auto;
+    }
+
+    .back ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      text-align: left;
+      margin: 0;
+    }
+
+    .back li {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="tile-container">
+    <div class="tile">
+      <!-- Front Side -->
+      <div class="front">
+        <div class="front-title">PSF</div>
+        <div class="front-content">We Sustain Barriers</div>
+      </div>
+      <!-- Back Side -->
+      <div class="back">
+        <ul>
+          <li>We discuss the purpose of hardware and human barriers at our location.</li>
+          <li>We evaluate how our tasks could impact process safety barriers.</li>
+          <li>We speak up when barriers don’t feel adequate.</li>
+          <li>We perform our roles in maintaining barrier health and alert supervision to our concerns.</li>
+          <li>We use an approval process for operations with degraded barriers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

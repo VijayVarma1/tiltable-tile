@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>We Maintain Safe Isolation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
+
+    .tile-container {
+      width: 250px;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .tile {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .tile-container:hover .tile {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Front Side - Teal Theme */
+    .front {
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+      flex-direction: column;
+    }
+
+    .front-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .front-content {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Back Side - Coral Theme */
+    .back {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      transform: rotateY(180deg);
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 20px;
+      overflow-y: auto;
+    }
+
+    .back ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      text-align: left;
+      margin: 0;
+    }
+
+    .back li {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="tile-container">
+    <div class="tile">
+      <!-- Front Side -->
+      <div class="front">
+        <div class="front-title">PSF</div>
+        <div class="front-content">We Maintain Safe Isolation</div>
+      </div>
+      <!-- Back Side -->
+      <div class="back">
+        <ul>
+          <li>We use isolation plans for the specific task based on up-to-date information.</li>
+          <li>We raise isolation concerns before the task starts and challenge when isolation plans cannot be executed.</li>
+          <li>We check for residual pressure or process material before breaking containment.</li>
+          <li>We monitor the integrity of isolations regularly and stop to reassess when change could affect an isolation integrity.</li>
+          <li>We confirm leak tightness before, during, during, and after reinstating equipment.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

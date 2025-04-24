@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>We Apply Procedures</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
+
+    .tile-container {
+      width: 250px;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .tile {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .tile-container:hover .tile {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Front Side - Green Theme */
+    .front {
+      background: linear-gradient(135deg, #0f9d58, #34a853);
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .front-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .front-content {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Back Side - Orange Theme */
+    .back {
+      background: linear-gradient(135deg, #ff8c00, #ffa500);
+      transform: rotateY(180deg);
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 20px;
+      overflow-y: auto;
+    }
+
+    .back ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      text-align: left;
+      margin: 0;
+    }
+
+    .back li {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="tile-container">
+    <div class="tile">
+      <!-- Front Side -->
+      <div class="front">
+        <div class="front-title">PSF</div>
+        <div class="front-content">We Apply Procedures</div>
+      </div>
+      <!-- Back Side -->
+      <div class="back">
+        <ul>
+          <li>We use operating and maintenance procedures, even if we are familiar with the task.</li>
+          <li>We discuss the key steps within a critical procedure before starting it.</li>
+          <li>We pause before key steps and check readiness to progress.</li>
+          <li>We stop, inform supervision and avoid workarounds if procedures are missing, unclear, unsafe, or cannot be followed.</li>
+          <li>We take time to become familiar with, and practice, emergency procedures.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
